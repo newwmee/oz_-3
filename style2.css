@@ -1,0 +1,106 @@
+/* 모든 요소의 기본 여백 제거 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* HTML과 Body의 기본 설정 */
+html,
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.calculator-continer {
+  display: flex;
+  /* 컨테이너 내부 아이템 만들어지는 방향 row- 좌우 column-위 아래 reverse가 붙으면 방향바뀜*/
+  /*flex는 컨테이너 내부 요소를 flex컨테이너로 만들고 자식요소들을 flexbox 레이아웃 규칙에 따라 배치 
+  여백을 주는 건 각각요소의 margin padding값이 하는 것*/
+  flex-direction: column;
+  /* 컨테이너 내부 여백을 주기 위해서 공간 확보 */
+  /* margin 100-위 아래 auto-좌우 여백 자동계산 요소 가로 중앙에 배치*/
+  padding: 20px;
+  width: 550px;
+  height: 750px;
+  border: 2px solid rgb(0, 0, 0); /*최종만들때는 green transparent-투명도로 바꾸기 */
+  border-radius: 5%;
+  background-color: rgb(19, 19, 19);
+}
+
+.display {
+  color: white;
+  height: 180px;
+  width: 500px;
+  margin: 0px 0px 10px 0px;
+  padding: 10px;
+  border: 2px solid rgb(73, 72, 72); /*최종만들때는 green transparent-투명도로 바꾸기 */
+  text-align: right;
+  font-size: 30px;
+}
+/* display button사이 여백 주기 위해서 각각의 박스에 마진 줌*/
+.buttons {
+  display: flex;
+  flex-wrap: wrap; /* 공간에 맞춰 자동 줄바꿈 */
+  height: 490px;
+  width: 500px;
+  padding: 10px;
+  border: 2px solid rgb(73, 72, 72); /*최종만들때는 green transparent-투명도로 바꾸기 */
+}
+
+.button {
+  flex: 1 1 25%;
+  font-size: 30px;
+  color: white;
+  background-color: rgb(73, 72, 72);
+}
+
+.button:hover {
+  /* hover 마우스를 요소위에 올리는 시점*/
+  opacity: 0.5; /* hover 0 완전투명하게 1 50퍼*/
+}
+
+.button:active {
+  /* 사용사자 활성화한 요소(버튼 등)을 나타냄 마우스 버튼을 누르는 순간부터 떼는 시점*/
+  background-color: rgb(121, 121, 121);
+}
+
+.funtion {
+  background-color: rgb(139, 137, 137);
+}
+
+.operator {
+  background-color: orange;
+}
+.number {
+  background-color: rgb(73, 72, 72);
+}
+
+.zero {
+  flex: 2 1 50%;
+}
+
+.top-btn {
+  display: flex;
+  align-items: end;
+  margin-bottom: 10px;
+}
+.top-btn button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0px 5px 0px 5px;
+  border: none;
+}
+.X {
+  background-color: orangered;
+}
+.mini {
+  background-color: gold;
+}
+.max {
+  background-color: rgb(4, 154, 4);
+}
